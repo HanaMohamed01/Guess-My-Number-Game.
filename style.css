@@ -1,30 +1,28 @@
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
 }
-
 html {
   font-size: 62.5%;
   box-sizing: border-box;
-}
-
+  margin: 10px;
+  width: 100%;}
 body {
+  margin: 10px;
+  width: 100%;
   font-family: 'Press Start 2P', sans-serif;
   color: #eee;
   background-color: #bd913f;
   /* background-color: #60b347; */
 }
-
 /* LAYOUT */
 header {
   position: relative;
   height: 35vh;
   border-bottom: 7px solid #eee;
 }
-
 main {
   height: 65vh;
   color: #eee;
@@ -32,22 +30,18 @@ main {
   align-items: center;
   justify-content: space-around;
 }
-
 .left {
   width: 52rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 .right {
   width: 52rem;
   font-size: 2rem;
 }
-
 /* ELEMENTS STYLE */
 h1 {
-  font-size: 4rem;
   text-align: center;
   position: absolute;
   width: 100%;
@@ -55,38 +49,31 @@ h1 {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
 .number {
   background: #eee;
   color: #333;
   font-size: 6rem;
   width: 15rem;
-  padding: 3rem 0rem;
   text-align: center;
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 50%);
+  padding: 2rem;
 }
-
 .between {
-  font-size: 1.4rem;
   position: absolute;
   top: 2rem;
   right: 2rem;
 }
-
 .again {
   position: absolute;
   top: 2rem;
   left: 2rem;
 }
-
 .guess {
   background: none;
   border: 4px solid #eee;
-  font-family: inherit;
-  color: inherit;
   font-size: 5rem;
   padding: 2.5rem;
   width: 25rem;
@@ -94,7 +81,6 @@ h1 {
   display: block;
   margin-bottom: 3rem;
 }
-
 .btn {
   border: none;
   background-color: #eee;
@@ -104,16 +90,119 @@ h1 {
   padding: 2rem 3rem;
   cursor: pointer;
 }
-
 .btn:hover {
   background-color: #ccc;
 }
-
 .message {
   margin-bottom: 8rem;
   height: 3rem;
 }
-
 .label-score {
   margin-bottom: 2rem;
+}
+/* RESPONSIVE DESIGN*/
+@media (max-width: 768px) {
+  html {
+    margin: 10px;
+  }
+  h1 {
+    top: 45%;
+  }
+  .number {
+    width: 12rem;
+    padding: 2rem 0;
+  }
+  .left, .right {
+    width: 100%;
+    max-width: 40rem;
+  }
+  main {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 2rem;
+    gap: 3rem;
+  }
+  .guess {
+    font-size: 4rem;
+    width: 20rem;
+    padding: 2rem;
+    margin-top:40px;
+  }
+  .btn {
+    font-size: 1.8rem;
+    padding: 1.5rem 2.5rem;
+  }
+}
+@media (max-width: 480px) {
+  html {
+    margin: 0;
+  }
+  body {
+    margin-top: 10px;
+  }
+  header {
+    height: 30vh;
+    padding: 1rem;
+  }
+  h1 {
+    top: 40%;
+  }
+  .number {
+    width: 10rem;
+    padding: 1.5rem 0;
+    font-size: 4rem;
+    margin-top: 30px;
+  }
+  .between {
+    position: static;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  .label-score {
+    text-align: center;
+  }
+  .label-highscore {
+    text-align: center;
+  }
+  .again {
+    position: static;
+    display: block;
+    margin: 1rem auto;
+  }
+  main {
+    height: 70vh;
+    padding: 1rem;
+  }
+  .left, .right {
+    width: 100%;
+    max-width: 100%;
+  }
+  .guess {
+    margin-top: 30px;
+    font-size: 3rem;
+    width: 15rem;
+    padding: 1.5rem;
+  }
+  .btn {
+    font-size: 1.6rem;
+    padding: 1.2rem 2rem;
+  }
+  .message {
+    text-align: center;
+    font-size: 1.4rem;
+    margin-bottom: 4rem;
+  }
+}
+@media (max-width: 320px) {
+  h1 {
+    top: 45%;
+  }
+  .number {
+    width: 8rem;
+            margin-top: 30px;
+  }
+  .guess {
+    margin-top: 20px;
+    width: 12rem;
+  }
 }
