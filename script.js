@@ -14,6 +14,10 @@ document.querySelector('.check').addEventListener('click',
       document.querySelector('.number').textContent = number;
        document.querySelector('body').style.backgroundColor = '#60b347';
        document.querySelector('.number').style.width = '25rem';
+      if (score > highscore){
+        highscore = score;
+        document.querySelector('highscore').textContent = highscore;
+      }
       //When guess in too high
     } else if (guess > number) {
       if (score > 1) {
